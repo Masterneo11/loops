@@ -24,11 +24,14 @@ def list_multiply_for(a: list[int], b: list[int]) -> list[int]:
     total = []
     #for i in range(len(a)):
         #for i in range(len(b)):
-    for i in range(3):
-            c = a[i] * b[i]
-            total.append(c)
-            #if len(total) == 3:
-              #  break
+    for i in range(len(a)):
+            for i in range(len(b)):
+              c = a[i] * b[i]
+              if len(total) > 2:
+                  break
+              total.append(c)
+              if len(total) > 2:
+                break
     return total
 
 # example 
