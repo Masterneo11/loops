@@ -5,16 +5,13 @@ def list_multiply_while(a: list[int], b : list[int]) -> list[int]:
 
     total = []
     i = 0 
-    while i < len(a) and i < 3:
+    while i < len(a):
       c = a[i] * b[i]
       total.append(c)
       i += 1
          
     return total 
         
-
-
-
 def list_multiply_for(a: list[int], b: list[int]) -> list[int]:
     # in here implement a for loop \
     #Implements the multiplication \
@@ -24,19 +21,18 @@ def list_multiply_for(a: list[int], b: list[int]) -> list[int]:
     total = []
     #for i in range(len(a)):
         #for i in range(len(b)):
-    for i in range(3):
-            c = a[i] * b[i]
-            total.append(c)
-            #if len(total) == 3:
-              #  break
+    for i in range(len(a)):
+              c = a[i] * b[i]
+              total.append(c)
+              
     return total
 
 # example 
 a = [1, 2, 3]
 b = [4, 5, 6]
-print(f"the for in range method is {list_multiply_for(a,b)} ")
-print("& ")
+print(f"for in range {list_multiply_for(a,b)} ")
+print("")
 
-print(f" the while loop method is {list_multiply_while(a,b)} ")
+print(f" while loop {list_multiply_while(a,b)} ")
   # This should compute [1*4, 2*5, 3*6]
   # Expected output: [4, 10, 18]
